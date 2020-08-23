@@ -1,0 +1,87 @@
+{
+   authors {
+     id,
+     name
+  },
+  books {
+    id,name
+  }
+}
+
+Output
+{
+  "data": {
+    "authors": [
+      {
+        "id": 1,
+        "name": "J. K. Rowling"
+      }
+    ],
+    "books": [
+      {
+        "id": 1,
+        "name": "Harry Potter and the Chamber of Secrets"
+      },
+      {
+        "id": 2,
+        "name": "Harry Potter and the Prisoner of Azkaban"
+      }
+    ]
+  }
+}
++++++++++++++++++++++++++++
+{
+  books {
+    id
+  } 
+}
+output
+{
+  "data": {
+    "books": [
+      {
+        "id": 1
+      },
+      {
+        "id": 2
+      }
+  }
+}
+
+
+
++++++++++++++++++++++++++++
+{
+	book(id:3)   {
+    name
+  }
+}
+
+output
+{
+  "data": {
+    "book": {
+      "name": "Harry Potter and the Goblet of Fire"
+    }
+  }
+}
+
++++++++++++++++++++++++++++
+{
+	author(id:3) {
+	  id,
+    name,
+	}
+}
+
+{
+  "data": {
+    "author": {
+      "id": 3,
+      "name": "Brent Weeks"
+    }
+  }
+}
++++++++++++++++++++++++++++
+
+
